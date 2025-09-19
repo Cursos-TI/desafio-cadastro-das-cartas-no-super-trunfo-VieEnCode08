@@ -16,7 +16,7 @@ char estado2 = 'C';
 char codigo2 [20] = "C02";
 char cidade2 [20] = "Fortaleza";
 unsigned long int populacao2 = 5123456;
-float area2 = 55000.12;
+float area2 = 5500.12;
 float pib2 = 8123456.93;
 int turismo2 = 43;
 
@@ -43,6 +43,7 @@ poder1 = (float) populacao1 + area1 + pib1 + turismo1 + capita1 + invertida1;
 poder2 = (float) populacao2 + area2 + pib2 + turismo2 + capita2 + invertida2; 
     
 // Dodos da Carta 01
+printf("\nDigite os Dados da Carta 01\n\n");
 printf("Digite o Estado: \n");
 scanf(" %c", &estado1);
 
@@ -68,7 +69,7 @@ printf("A Densidade é: %.2f\n", densidade1);
 printf("O PIB per Capita é: %.2f\n", capita1);
 
 // Dodos da Carta 02
-printf("\n\n");
+printf("\n\nDigite os Dados da Carta 02\n\n");
 printf("Digite o Estado: \n");
 scanf(" %c", &estado2);
 
@@ -115,12 +116,12 @@ printf("População: %lu\n", populacao2);
 printf("Área: %.2f km²\n", area2);
 printf("PIB: %.2f Bilhões de Reais\n", pib2);
 printf("Turismo: %d\n", turismo2); 
-printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
 printf("PIB per Capita: %.2f Reais\n", capita2);
 printf("Super Poder: %.2f\n", poder2);
 
 // Comparação das Carta
-printf("\nComparação das Cartas\n");
+printf("\nComparação das Cartas:\n\n");
 
 printf("Populacão: A carta 01 venceu a carta 02? %d\n", 
                 (populacao1) > (populacao2));
