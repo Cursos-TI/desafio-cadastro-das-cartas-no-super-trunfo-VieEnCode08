@@ -3,8 +3,10 @@
     int main() {
     
         // Adicionada a variavel para o jogador escolher
+        int atributo1;
+        int atributo2;
+        float valor1, valor2;
         int jogador;
-        int atributo;
 
         // informação da carta 01
         char estado1 = 'B';
@@ -149,88 +151,207 @@
             printf ("PIB per Capita: %.2f Reais\n", capita2);
             printf ("Super Poder: %.2f\n", poder2);
 
-            // Comparação das Cartas
-            printf ("\nComparação das Cartas:\n\n");
-            printf ("Atributos:");
+            // Atributos das Cartas
+            printf ("\nEscolha do Primeiro Atributos:\n\n");
+            printf ("Atributos 01:");
             printf ("\n1- População\n");
             printf ("2- Área\n");
             printf ("3- PIB\n");
             printf ("4- Ponto Turistico\n");
             printf ("5- Densidade Populacional\n");
             printf ("Escoha um atributo para fazer a comparação: ");
-            scanf ("%d", &atributo);
-            printf ("\nBrasil\n");
+            scanf ("%d", &atributo1);
 
-            switch (atributo) {
-            
-            case 1:
-                printf ("População\n");
-                printf ("Carta 01: %lu\n", populacao1);
-                printf ("Carta 02: %lu\n", populacao2);
+            switch (atributo1) {
+                
+                case 1:
+                    printf ("População\n");
+                    printf ("Carta 01: %lu\n", populacao1);
+                    printf ("Carta 02: %lu\n", populacao2);
 
-                if (populacao1 > populacao2) {
-                        printf ("A carta 01 venceu!!\n");
-                    } else if (populacao1 == populacao2) {
-                        printf ("O jogo empatou!!\n");
-                    } else { 
-                        printf ("A carta 02 venceu!!\n");
-                    }
-                break;
-            case 2: 
-                printf ("Área\n");
-                printf ("Carta 01: %.2f km²\n", area1);
-                printf ("Carta 02: %.2f km²\n", area2);
+                    populacao1 > populacao2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
 
-                if (area1 > area2) {
-                        printf ("A carta 01 venceu!!\n");
-                    } else if (area1 == area2) {
-                        printf ("O jogo empatou!!\n");
-                    } else {
-                            printf ("A carta 02 venceu!!\n");
-                    }
-                break;
-            case 3:
-                printf ("PIB\n");
-                printf ("Carta 01: %.2f Bilhões de Reais\n", pib1);
-                printf ("Carta 02: %.2f Bilhões de Reais\n", pib2);
+                    valor1 = (float) populacao1 + populacao2;
 
-                if (pib1 > pib2) {
-                        printf ("A carta 01 venceu!!\n");
-                    } else if (pib1 == pib2) {
-                        printf ("O jogo empatou!!\n");
-                    } else {
-                        printf ("A carta 02 venceu!!\n");
-                    }
-                break;
-            case 4: 
-                printf ("Ponto Turistico\n");
-                printf ("Carta 01: %d\n", turismo1);
-                printf ("Carta 02: %d\n", turismo2); 
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    
+                    break;
+                case 2: 
+                    printf ("Área\n");
+                    printf ("Carta 01: %.2f km²\n", area1);
+                    printf ("Carta 02: %.2f km²\n", area2);
 
-                if (turismo1 > turismo2) {
-                    printf ("A carta 01 venceu!!\n");
-                } else if (turismo1 == turismo2) {
-                    printf ("O jogo empatou!!\n");
-                } else {
-                    printf ("A carta 02 venceu!!\n");
+                    area1 > area2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor1 = (float) area1 + area2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    break;
+                case 3:
+                    printf ("PIB\n");
+                    printf ("Carta 01: %.2f Bilhões de Reais\n", pib1);
+                    printf ("Carta 02: %.2f Bilhões de Reais\n", pib2);
+
+                    pib1 > pib2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+                    
+                    valor1 = (float) pib1 + pib2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    break;
+                case 4: 
+                    printf ("Ponto Turistico\n");
+                    printf ("Carta 01: %d\n", turismo1);
+                    printf ("Carta 02: %d\n", turismo2); 
+
+                    turismo1 > turismo2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor1 = (float) turismo1 + turismo2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    break;
+                case 5:
+                    printf ("\nDensidade Populacional\n");
+                    printf ("Carta 01: %.2f hab/km²\n", densidade1);
+                    printf ("Carta 02: %.2f hab/km²\n", densidade2);
+
+                    densidade1 < densidade2 ? printf ("Carta 01 é menor que carta 02\n\n") : printf ("Carta 02 é menor que carta 01\n\n");
+
+                    valor1 = (float) densidade1 + densidade2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    break;
+                default:
+                    printf ("Opção Inválida\n");
+                    break;
                 }
-                break;
-            case 5:
-                printf ("Densidade Populacional\n");
-                printf ("Carta 01: %.2f hab/km²\n", densidade1);
-                printf ("Carta 02: %.2f hab/km²\n", densidade2);
+            printf ("\nEscolha do Segundo Atributo:\n\n");
+            printf ("Atributos 02:");
+            printf ("\n1- População\n");
+            printf ("2- Área\n");
+            printf ("3- PIB\n");
+            printf ("4- Ponto Turistico\n");
+            printf ("5- Densidade Populacional\n");
+            printf ("Escoha um atributo para fazer a comparação: ");
+            scanf ("%d", &atributo2);
 
-                if (densidade1 < densidade2) {
-                    printf ("A carta 01 venceu!!\n");
-                } else if (densidade1 == densidade2) {
-                    printf ("O jogo empatou!!\n");
+                if (atributo1 == atributo2) {
+                    printf ("Você escolheu o mesmo atributo\n");
                 } else {
-                    printf ("A carta 02 venceu!!\n");
+                    switch (atributo2) {
+                case 1:
+                    printf ("\nBrasil\n");
+                    printf ("População\n");
+                    printf ("Carta 01: %lu\n", populacao1);
+                    printf ("Carta 02: %lu\n", populacao2);
+
+                    populacao1 > populacao2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor2 = (float) populacao1 + populacao2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    printf ("Soma das cartas: %.2f\n", valor2);
+                    
+                    if (valor1 > valor2) {
+                        if (valor1 == valor2 ) {
+                            printf ("O jogo empatou!!\n");
+                        }
+                        printf ("O atributo 01 venceu!!\n");
+                    } else {
+                        printf ("O atributo 02 venceu!!\n");
+                    }
+                    break;
+                case 2: 
+                    printf ("\nBrasil\n");
+                    printf ("Área\n");
+                    printf ("Carta 01: %.2f km²\n", area1);
+                    printf ("Carta 02: %.2f km²\n", area2);
+
+                    area1 > area2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor2 = (float) area1 + area2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    printf ("Soma das cartas: %.2f\n", valor2);
+                    
+                    if (valor1 > valor2) {
+                        if (valor1 == valor2 ) {
+                            printf ("O jogo empatou!!\n");
+                        }
+                        printf ("O atributo 01 venceu!!\n");
+                    } else {
+                        printf ("O atributo 02 venceu!!\n");
+                    }
+                    break;
+                case 3:
+                    printf ("\nBrasil\n");
+                    printf ("PIB\n");
+                    printf ("Carta 01: %.2f Bilhões de Reais\n", pib1);
+                    printf ("Carta 02: %.2f Bilhões de Reais\n", pib2);
+
+                    pib1 > pib2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor2 = (float) pib1 + pib2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    printf ("Soma das cartas: %.2f\n", valor2);
+                    
+                    if (valor1 > valor2) {
+                        if (valor1 == valor2 ) {
+                            printf ("O jogo empatou!!\n");
+                        }
+                        printf ("O atributo 01 venceu!!\n");
+                    } else {
+                        printf ("O atributo 02 venceu!!\n");
+                    }
+                    break;
+                case 4: 
+                    printf ("\nBrasil\n");
+                    printf ("Ponto Turistico\n");
+                    printf ("Carta 01: %d\n", turismo1);
+                    printf ("Carta 02: %d\n", turismo2); 
+
+                    turismo1 > turismo2 ? printf ("Carta 01 é maior que carta 02\n\n") : printf ("Carta 02 é maior que carta 01\n\n");
+
+                    valor2 = (float) turismo1 + turismo2;
+
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    printf ("Soma das cartas: %.2f\n", valor2);
+                    
+                    if (valor1 > valor2) {
+                        if (valor1 == valor2 ) {
+                            printf ("O jogo empatou!!\n");
+                        }
+                        printf ("O atributo 01 venceu!!\n");
+                    } else {
+                        printf ("O atributo 02 venceu!!\n");
+                    }
+                    break;
+                case 5:
+                    printf ("\nBrasil\n");
+                    printf ("Densidade Populacional\n");
+                    printf ("Carta 01: %.2f hab/km²\n", densidade1);
+                    printf ("Carta 02: %.2f hab/km²\n", densidade2);
+
+                    densidade1 < densidade2 ? printf ("Carta 01 é menor que carta 02\n\n") : printf ("Carta 02 é menor que carta 1\n\n");
+
+                    valor2 = (float) densidade1 + densidade2;
+                    
+                    printf ("Soma das cartas: %.2f\n", valor1);
+                    printf ("Soma das cartas: %.2f\n", valor2);
+                    
+                    if (valor1 > valor2) {
+                        if (valor1 == valor2 ) {
+                            printf ("O jogo empatou!!\n");
+                        }
+                        printf ("O atributo 01 venceu!!\n");
+                    } else {
+                        printf ("O atributo 02 venceu!!\n");
+                    }
+                    break;
+                default:
+                    printf ("Opção Inválida\n");
+                    break;
+                    }
                 }
-                break;
-            default:
-                printf ("Opção Inválida\n");
-                break;
-            }
         return 0;
     }
